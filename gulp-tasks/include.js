@@ -5,7 +5,7 @@ const { browsersync } = require("./serv");
 const include = () => 
     src(['./src/index.html'])
         .pipe(fileInclude({
-          prefix: '@@',
+          prefix: '@',
           basepath: '@file'
         }))
         .pipe(dest('./'))
