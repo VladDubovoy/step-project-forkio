@@ -1,15 +1,12 @@
 const { watch } = require("gulp");
 const { scripts } = require("./scripts");
 const { styles } = require("./styles");
-const { browsersync } = require("./serv");
+const { include } = require("./include");
 
 const watchTask = () => {
-	watch("./index.html", (cb) => {
-		browsersync.reload();
-		cb();
-	});
 	watch("./src/styles/*.scss", styles);
 	watch("./src/js/*.js", scripts);
+	watch("./src/*.html", include);
 };
 
 exports.watch = watchTask;
