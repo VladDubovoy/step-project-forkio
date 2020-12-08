@@ -90,12 +90,13 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr calc(1fr / 3);
+
     background-color: #f4f4f4;
     margin-top: 50px;
     padding-top: 94px;
 
     & h2 {
-      // width: 100%;
+      width: 100%;
       font-family: $montserrat;
       font-weight: bold;
       font-size: 48px;
@@ -109,7 +110,7 @@
 
     &__icon {
       width: 20%;
-      margin-right: 25px;
+      margin-right: 23px;
     }
 
     &__articles {
@@ -127,9 +128,6 @@
         font-family: $montserrat;
         color: #848e97;
       }
-    }
-
-    &__text-heading {
     }
 
     &__img-big {
