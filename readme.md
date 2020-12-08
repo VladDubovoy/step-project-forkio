@@ -29,26 +29,7 @@ class="block" class="block**element class="block**element--modificator"
 
 <!-- Adaptive -->
 
-mobile-first
-media queries for <div class="container"></div>
-@media(min-width: 480px){
-
-}
-@media(min-width: 481px){
-
-}
-@media(min-width: 993px){
-
-}
-@media(min-width: 1200px){
-
-}
-@media(min-width: 480px){
-
-}
-@media(min-width: 480px){
-
-}
+mobile-first 320-480px, 481-768px, 993-1200px
 
 <!-- Git команды -->
 <!-- Создание ветки -->
