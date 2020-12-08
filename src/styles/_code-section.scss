@@ -89,6 +89,8 @@
 @media (min-width: 993px) {
   .code-section {
     display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr calc(1fr / 3);
     background-color: #f4f4f4;
     margin-top: 50px;
     padding-top: 94px;
@@ -108,7 +110,7 @@
 
     &__icon {
       width: 20%;
-      margin-right: 25px;
+      margin-right: 23px;
     }
 
     &__articles {
