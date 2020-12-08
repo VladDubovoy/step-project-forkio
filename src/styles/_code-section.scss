@@ -1,0 +1,141 @@
+.code-section {
+  margin-top: 110px;
+  & h2 {
+    font-family: $montserrat;
+    font-weight: bold;
+    font-size: 32px;
+    margin: 0 auto;
+    width: 90%;
+    padding-bottom: 36px;
+    text-align: center;
+    color: #8d81ac;
+    font-weight: bold;
+  }
+  &__article-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 38px;
+  }
+
+  &__articles {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+
+  &__text {
+    text-align: center;
+    color: #848e97;
+    &-heading {
+      font-family: $montserrat;
+      color: #323232;
+      margin-bottom: 14px;
+      margin-top: 20px;
+    }
+    &-floor {
+      font-family: $lato;
+      font-size: 14px;
+      line-height: 21px;
+      color: #848e97;
+    }
+  }
+
+  &__img-big {
+    overflow: hidden;
+    margin-top: 14px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 992px) {
+  .code-section {
+    margin-top: 150px;
+
+    & h2 {
+      font-size: 42px;
+      font-family: $montserrat;
+    }
+
+    &__icon {
+      margin-right: 25px;
+      width: 20%;
+    }
+
+    &__article-wrap {
+      flex-direction: row;
+      align-content: space-between;
+      margin-bottom: 60px;
+    }
+    &__text {
+      text-align: left;
+      width: 70%;
+      &-floor {
+        font-family: $montserrat;
+        color: #848e97;
+      }
+    }
+
+    &__img-big {
+      margin-left: 50px;
+      display: grid;
+      justify-items: stretch;
+    }
+  }
+}
+
+@media (min-width: 993px) {
+  .code-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr calc(1fr / 3);
+    background-color: #f4f4f4;
+    margin-top: 50px;
+    padding-top: 94px;
+
+    & h2 {
+      // width: 100%;
+      font-family: $montserrat;
+      font-weight: bold;
+      font-size: 48px;
+      font-size: 48px;
+      grid-column: 2;
+      grid-row: 1;
+      padding: 0;
+      text-align: left;
+      margin: 0;
+    }
+
+    &__icon {
+      width: 20%;
+      margin-right: 25px;
+    }
+
+    &__articles {
+      grid-column: 1;
+      grid-row: 1/3;
+    }
+    &__article-wrap {
+      flex-direction: row;
+      align-content: space-between;
+    }
+    &__text {
+      text-align: left;
+      width: 70%;
+      &-floor {
+        font-family: $montserrat;
+        color: #848e97;
+      }
+    }
+
+    &__text-heading {
+    }
+
+    &__img-big {
+      grid-column: 2;
+      grid-row: 2;
+      margin-top: 19px;
+    }
+  }
+}
