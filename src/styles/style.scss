@@ -9,26 +9,19 @@
 @import "./people-talking-section";
 @import "./pricing-section";
 
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
 .container {
   margin: 0 auto;
   padding: 0px 10px;
-  //   mobile 320 layout
   min-width: 320px;
   max-width: 100%;
-  //   mobile 768 layout
-  @media (min-width: 481px) {
-    max-width: 600px;
-  }
-  //   tablet 768 layout
-  @media (min-width: 768px) {
-    max-width: 800px;
-  }
-  //   small laptop / big tablet 768 layout
+
   @media (min-width: 993px) {
-    max-width: 1000px;
-  }
-  //   desktop 1200 layout
-  @media (min-width: 1200px) {
     max-width: 1200px;
   }
 }
