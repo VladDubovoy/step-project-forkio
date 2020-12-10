@@ -41,21 +41,23 @@
 .people-talking {
   display: grid;
   grid-template-columns: 1fr;
-  row-gap: 45px;
+  row-gap: calc(45px + (60 - 45) * ((100vw - 320px) / (768 - 320)));
 
   @media (min-width: 481px) {
-    grid-template-columns: repeat(2, 45%);
+    grid-template-columns: 45% 45%;
     justify-content: space-between;
-    row-gap: 50px;
   }
 
   @media (min-width: 768px) {
-    row-gap: 60px;
+    row-gap: calc(60px + (115 - 60) * ((100vw - 768px) / (1200 - 768)));
   }
 
   @media (min-width: 993px) {
-    grid-template-columns: repeat(3, 30%);
-    row-gap: 110px;
+    grid-template-columns: 30% 30% 30%;
+  }
+
+  @media (min-width: 1200px) {
+    row-gap: 115px;
   }
 
   &__item {
@@ -108,7 +110,7 @@
     content: "";
     position: absolute;
     height: 2px;
-    width: 245px;
+    width: calc(245px + (555 - 245) * ((100vw - 320px) / (767 - 320)));
     left: 10px;
     right: 10px;
     bottom: -24px;
@@ -116,19 +118,13 @@
     background-color: #645766;
   }
 
-  @media (min-width: 481px) {
-    &::before {
-      width: 340px;
-    }
-  }
-
   @media (min-width: 768px) {
     &::before {
-      width: 555px;
+      width: calc(555px + (780 - 555) * ((100vw - 768px) / (1200 - 768)));
     }
   }
 
-  @media (min-width: 993px) {
+  @media (min-width: 1200px) {
     &::before {
       width: 780px;
     }
