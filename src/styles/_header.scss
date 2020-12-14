@@ -91,42 +91,53 @@
     display: none;
   }
 
-  & span {
+  & .menu-burger__span,
+  &::before,
+  &::after {
     position: absolute;
     width: 100%;
     height: 3px;
     background-color: #fff;
     display: block;
     transition: all 0.3s ease-in-out;
-    left: 0px;
+    right: 0px;
     border-radius: 5px;
   }
-  & span:nth-child(1) {
+
+  &::before,
+  &::after {
+    content: "";
+  }
+
+  &::before {
     top: 0px;
     width: 15px;
-    left: 11px;
   }
-  & span:nth-child(2),
-  & span:nth-child(3) {
+
+  & .menu-burger__span {
     top: 9px;
   }
-  & span:nth-child(4) {
+
+  &::after {
     top: 18px;
   }
 }
 
-.menu-burger--open span {
-  &:nth-child(1),
-  &:nth-child(4) {
-    width: 0px;
-    top: 9px;
-    left: 50%;
-  }
-  &:nth-child(2) {
+.menu-burger--open .menu-burger__span {
+  &:nth-child(1) {
     transform: rotate(45deg);
   }
-  &:nth-child(3) {
+  &:nth-child(2) {
     transform: rotate(-45deg);
+  }
+}
+
+.menu-burger--open {
+  &::before,
+  &:after {
+    width: 0px;
+    top: 9px;
+    right: 50%;
   }
 }
 
